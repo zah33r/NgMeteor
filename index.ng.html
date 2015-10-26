@@ -1,2 +1,8 @@
-<p>There is nothing here at the moment</p>
-<p> Yeehaa --- {{ 1 + 2 + 5 }} </p>
+<div ng-controller="PartiesListCtrl">
+  <ul>
+    <li ng-repeat="party in parties">
+      {{party.name}}
+      <p>{{party.description}}</p>
+    </li>
+  </ul>
+</div>
