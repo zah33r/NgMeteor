@@ -1,8 +1,27 @@
 <div ng-controller="PartiesListCtrl">
+  <form>
+    <label>Name</label>
+    <input ng-model="newParty.name">
+    <label>Description</label>
+    <input ng-model="newParty.description">
+    <button ng-click="parties.push(newParty); newParty='';">Add</button>
+  </form>
+  <ul>
+    <li ng-repeat="party in parties">
+      {{party.name}}
+      <p>{{party.description}}</p>
+      <input type="checkbox" name="checkbox" value="value" ng-click="remove(party)">
+      <!-- <input type="checkbox" ng-click="remove(party)">X</input> -->
+    </li>
+  </ul>
+</div>
+
+
+<!-- <div ng-controller="PartiesListCtrl">
   <ul>
     <li ng-repeat="party in parties">
       {{party.name}}
       <p>{{party.description}}</p>
     </li>
   </ul>
-</div>
+</div> -->
